@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'kiosk';
+  src: url('../../../responsive/common/fonts/kiosk.eot');
+  src: url('../../../responsive/common/fonts/kiosk.eot?#iefix') format('embedded-opentype'), url('../../../responsive/common/fonts/kiosk.woff') format('woff'), url('../../../responsive/common/fonts/kiosk.ttf') format('truetype'), url('../../../responsive/common/fonts/kiosk.svg#kiosk') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class*='kiosk-icon']:before {
+  display: inline-block;
+  font-family: 'kiosk';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.kiosk-icon-home:before {
+  content: '\0041';
+}
+.kiosk-icon-mirror:before {
+  content: '\0042';
+}
+.kiosk-actions {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: all 0.5s;
+  z-index: 2;
+}
+.kiosk-actions .btn {
+  font-size: 1.5em;
+}
+.kiosk-actions .overlay {
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.kiosk-actions .kiosk-buttons {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  list-style: none;
+}
+.kiosk-actions .kiosk-buttons li {
+  line-height: 1;
+}
+.kiosk-actions .kiosk-buttons button {
+  display: block;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+.kiosk-actions .centered-menu-items {
+  position: relative;
+  line-height: 100vh;
+}
+.kiosk-actions .toggle-kiosk-menu-wrapper {
+  position: absolute;
+  line-height: 100vh;
+}
+.kiosk-actions .toggle-kiosk-menu {
+  pointer-events: all;
+}
+.kiosk-actions:not(.opened) {
+  left: 100%;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.kiosk-actions:not(.opened) .close-icon {
+  display: none;
+}
+.kiosk-actions.opened {
+  right: 0;
+}
+.kiosk-actions.opened .open-icon {
+  display: none;
+}
+.kiosk-actions.opened .overlay {
+  opacity: 0.5;
+}
